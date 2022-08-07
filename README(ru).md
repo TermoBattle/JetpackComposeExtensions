@@ -1,3 +1,5 @@
+# JetpackComposeExtensions
+
 Моя маленькая библиотека, которая содержит несколько маленьких и удобных перегрузок для Jetpack Compose
 
 [Тот же README, но на английском](/README.md)
