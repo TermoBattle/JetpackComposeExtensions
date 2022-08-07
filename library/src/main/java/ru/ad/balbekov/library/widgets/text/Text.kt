@@ -1,11 +1,12 @@
+@file:Suppress("unused")
+
 package ru.ad.balbekov.library.widgets.text
 
 import androidx.annotation.StringRes
-import androidx.compose.foundation.layout.Column
-import androidx.compose.material.LocalContentColor
-import androidx.compose.material.LocalTextStyle
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Text
+import androidx.compose.material3.LocalContentColor
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Text
+import androidx.compose.material3.LocalTextStyle
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -19,19 +20,19 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.text.style.TextDecoration
 import androidx.compose.ui.text.style.TextOverflow
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.TextUnit
-import ru.ad.balbekov.library.R
 
 /**
  * High level element that displays text and provides semantics / accessibility information.
  *
- * The default [style] uses the [LocalTextStyle] provided by the [MaterialTheme] / components. If
+ * The default [style] uses the [LocalTextStyle] provided by the [MaterialTheme] / components.
+ * If
  * you are setting your own style, you may want to consider first retrieving [LocalTextStyle],
  * and using [TextStyle.copy] to keep any theme-defined attributes, only modifying the specific
  * attributes you want to override.
  *
- * For ease of use, commonly used parameters from [TextStyle] are also present here. The order of
+ * For ease of use, commonly used parameters from [TextStyle] are also present here.
+ * The order of
  * precedence is as follows:
  * - If a parameter is explicitly set here (i.e, it is _not_ `null` or [TextUnit.Unspecified]),
  * then this parameter will always be used.
@@ -43,7 +44,8 @@ import ru.ad.balbekov.library.R
  *
  * @param text ID of the [StringRes] to be displayed
  * @param modifier the [Modifier] to be applied to this layout node
- * @param color [Color] to apply to the text. If [Color.Unspecified], and [style] has no color set,
+ * @param color [Color] to apply to the text.
+ * If [Color.Unspecified], and [style] has no color set,
  * this will be [LocalContentColor].
  * @param fontSize the size of glyphs to use when painting the text. See [TextStyle.fontSize].
  * @param fontStyle the typeface variant to use when drawing the letters (e.g., italic).
@@ -59,16 +61,23 @@ import ru.ad.balbekov.library.R
  * @param lineHeight line height for the [Paragraph] in [TextUnit] unit, e.g. SP or EM.
  * See [TextStyle.lineHeight].
  * @param overflow how visual overflow should be handled.
- * @param softWrap whether the text should break at soft line breaks. If false, the glyphs in the
- * text will be positioned as if there was unlimited horizontal space. If [softWrap] is false,
+ * @param softWrap whether the text should break at soft line breaks.
+ * If false, the glyphs in the
+ * text will be positioned as if there was unlimited horizontal space.
+ * If [softWrap] is false,
  * [overflow] and TextAlign may have unexpected effects.
  * @param maxLines an optional maximum number of lines for the text to span, wrapping if
- * necessary. If the text exceeds the given number of lines, it will be truncated according to
- * [overflow] and [softWrap]. If it is not null, then it must be greater than zero.
- * @param onTextLayout callback that is executed when a new text layout is calculated. A
+ * necessary.
+ * If the text exceeds the given number of lines, it will be truncated according to
+ * [overflow] and [softWrap].
+ * If it is not null, then it must be greater than zero.
+ * @param onTextLayout callback that is executed when a new text layout is calculated.
+ * A
  * [TextLayoutResult] object that callback provides contains paragraph information, size of the
- * text, baselines and other details. The callback can be used to add additional decoration or
- * functionality to the text. For example, to draw selection around the text.
+ * text, baselines and other details.
+ * The callback can be used to add additional decoration or
+ * functionality to the text.
+ * For example, to draw selection around the text.
  * @param style style configuration for the text such as color, font, line height etc.
  */
 @Composable
