@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/balbe/AndroidStudioProjects/JetpackComposeExtensions/library/src/main/java/ru/ad/balbekov/library/functions/Remember.kt" value="0.33" />
+        <entry key="..\:/Users/balbe/AndroidStudioProjects/JetpackComposeExtensions/library/src/main/java/ru/ad/balbekov/library/widgets/buttons/IconButton.kt" value="0.3158783783783784" />
+        <entry key="..\:/Users/balbe/AndroidStudioProjects/JetpackComposeExtensions/library/src/main/java/ru/ad/balbekov/library/widgets/lazy_layouts/lazy_column/LazyColumnFor.kt" value="0.3158783783783784" />
+      </map>
+    </option>
+  </component>
+  <component name="ExternalStorageConfigurationManager" enabled="true" />
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
