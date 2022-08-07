@@ -1,8 +1,12 @@
 @file:Suppress("UnstableApiUsage")
 
+import io.grpc.internal.SharedResourceHolder.release
+import org.gradle.internal.impldep.jcifs.smb.BufferCache
+
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
+    id("maven-publish")
 }
 
 android {
@@ -33,7 +37,7 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
         @Suppress("SuspiciousCollectionReassignment")
-        freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn"
+        freeCompilerArgs += "-opt-in=kotlin.RequiresOptIn" + "-Xuse-k2"
     }
 
     composeOptions {
@@ -52,5 +56,17 @@ dependencies {
         implementation(compose.ui.tooling)
         implementation(compose.foundation)
         implementation(compose.material3)
+    }
+}
+afterEvaluate {
+    publishing {
+        publications {
+            register("release", MavenPublication::class) {
+                from(components["release"])
+                groupId = "com.github.BalbekovAD"
+                artifactId = "JetpackComposeExtensions"
+                version = "1.0"
+            }
+        }
     }
 }
