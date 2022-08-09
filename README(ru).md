@@ -19,7 +19,7 @@ Text, Icon.
     repository {
         jcenter()
         mavenCentral()
-//        ...
+        ...
         maven { url 'https://jitpack.io' }
     }
    ```
@@ -30,7 +30,7 @@ Text, Icon.
         jcenter()
         mavenCentral()
         ...
-        maven { url = URI.create("https://jitpack.io") }
+        maven("https://jitpack.io")
     }
     ```
 2. Потом добавьте зависимость самой библиотеки
