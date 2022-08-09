@@ -22,7 +22,7 @@ In the future, I plan to add documentation here for all functions.
     repository {
     jcenter()
     mavenCentral()
-//    ...
+    ...
     maven { url 'https://jitpack.io' }
   }
      ```
@@ -33,7 +33,7 @@ In the future, I plan to add documentation here for all functions.
    repository {
     jcenter()
     mavenCentral()
-//    ...
+    ...
     maven("https://jitpack.io")
   }
   ```
