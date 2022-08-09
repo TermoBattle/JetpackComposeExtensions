@@ -1,6 +1,6 @@
 # Jetpack Compose Extensions
 
-[![](https://jitpack.io/v/BalbekovAD/JetpackComposeExtensions.svg)](https://jitpack.io/#BalbekovAD/JetpackComposeExtensions)
+[![Jitpack Icon that displays last version](https://jitpack.io/v/BalbekovAD/JetpackComposeExtensions.svg)](https://jitpack.io/#BalbekovAD/JetpackComposeExtensions)
 
 My handy library that contains some convenient and short overloads for Jetpack Compose
 

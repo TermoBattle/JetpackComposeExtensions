@@ -1,5 +1,7 @@
 # Jetpack Compose Extensions
 
+[![Jitpack Icon that displays last version](https://jitpack.io/v/BalbekovAD/JetpackComposeExtensions.svg)](https://jitpack.io/#BalbekovAD/JetpackComposeExtensions)
+
 Моя маленькая библиотека, которая содержит несколько маленьких и удобных перегрузок для Jetpack
 Compose
 
