@@ -19,7 +19,7 @@ In the future, I plan to add documentation here for all functions.
   *Groovy (\*.gradle)*
 
   ```groovy
-    repository {
+  repository {
     jcenter()
     mavenCentral()
     ...
