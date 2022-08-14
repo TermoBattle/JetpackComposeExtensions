@@ -19,7 +19,7 @@ Text, Icon.
     repository {
         jcenter()
         mavenCentral()
-//        ...
+        ...
         maven { url 'https://jitpack.io' }
     }
    ```
@@ -71,29 +71,29 @@ val fieldValue by rememberMutableStateOf(value = 666)
 * ### Перегрузки `Lazy*For(...)` и `Lazy*ForIndexed(...)`
   *До:*
   ```kotlin
-  LazyColumn{
-      items(...){
+  LazyColumn {
+      items(...) {
           ...
       }
   }
   ```
   *После:*
   ```kotlin
-    LazyColumnFor(...){
+    LazyColumnFor(...) {
         ...
     }
   ```
   *До:*
   ```kotlin
   LazyRow{
-      itemsIndexed(...){
+      itemsIndexed(...) {
           ...
       }
   }
   ```
   *После:*
   ```kotlin
-    LazyRowForIndexed(...){
+    LazyRowForIndexed(...) {
         ...
     }
   ```
