@@ -1,8 +1,5 @@
 @file:Suppress("UnstableApiUsage")
 
-import io.grpc.internal.SharedResourceHolder.release
-import org.gradle.internal.impldep.jcifs.smb.BufferCache
-
 plugins {
     id("com.android.library")
     id("org.jetbrains.kotlin.android")
@@ -49,7 +46,7 @@ android {
 }
 
 dependencies {
-    mydeps.apply {
+    mydeps.run {
         implementation(core)
         implementation(appcompat)
         implementation(compose.ui)
@@ -65,7 +62,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "com.github.BalbekovAD"
                 artifactId = "JetpackComposeExtensions"
-                version = "1.0"
+                version = "1.1"
             }
         }
     }

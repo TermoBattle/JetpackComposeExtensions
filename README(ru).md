@@ -1,7 +1,5 @@
 # Jetpack Compose Extensions
 
-[![Jitpack Icon that displays last version](https://jitpack.io/v/BalbekovAD/JetpackComposeExtensions.svg)](https://jitpack.io/#BalbekovAD/JetpackComposeExtensions)
-
 Моя маленькая библиотека, которая содержит несколько маленьких и удобных перегрузок для Jetpack
 Compose
 
@@ -21,7 +19,7 @@ Text, Icon.
     repository {
         jcenter()
         mavenCentral()
-        ...
+//        ...
         maven { url 'https://jitpack.io' }
     }
    ```
@@ -32,7 +30,7 @@ Text, Icon.
         jcenter()
         mavenCentral()
         ...
-        maven("https://jitpack.io")
+        maven { url = URI.create("https://jitpack.io") }
     }
     ```
 2. Потом добавьте зависимость самой библиотеки
@@ -70,3 +68,32 @@ Icon(
 ```kotlin
 val fieldValue by rememberMutableStateOf(value = 666)
 ```
+* ### Перегрузки `Lazy*For(...)` и `Lazy*ForIndexed(...)`
+  *До:*
+  ```kotlin
+  LazyColumn{
+      items(...){
+          ...
+      }
+  }
+  ```
+  *После:*
+  ```kotlin
+    LazyColumnFor(...){
+        ...
+    }
+  ```
+  *До:*
+  ```kotlin
+  LazyRow{
+      itemsIndexed(...){
+          ...
+      }
+  }
+  ```
+  *После:*
+  ```kotlin
+    LazyRowForIndexed(...){
+        ...
+    }
+  ```

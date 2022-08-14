@@ -1,6 +1,6 @@
 # Jetpack Compose Extensions
 
-[![Jitpack Icon that displays last version](https://jitpack.io/v/BalbekovAD/JetpackComposeExtensions.svg)](https://jitpack.io/#BalbekovAD/JetpackComposeExtensions)
+[![](https://jitpack.io/v/BalbekovAD/JetpackComposeExtensions.svg)](https://jitpack.io/#BalbekovAD/JetpackComposeExtensions)
 
 My handy library that contains some convenient and short overloads for Jetpack Compose
 
@@ -22,7 +22,7 @@ In the future, I plan to add documentation here for all functions.
     repository {
     jcenter()
     mavenCentral()
-    ...
+//    ...
     maven { url 'https://jitpack.io' }
   }
      ```
@@ -33,7 +33,7 @@ In the future, I plan to add documentation here for all functions.
    repository {
     jcenter()
     mavenCentral()
-    ...
+//    ...
     maven("https://jitpack.io")
   }
   ```
@@ -56,7 +56,7 @@ In the future, I plan to add documentation here for all functions.
 
 # Documentation
 
-* ### ```Text(...)``` and ```Icon(...)``` overloads to avoid writing ```stringResource(...)```
+* ### `Text(...)` and `Icon(...)` overloads to avoid writing `stringResource(...)`
   
   ```kotlin
   Text(text = R.string.welcome_text)
@@ -69,8 +69,37 @@ In the future, I plan to add documentation here for all functions.
   )
   ```
   
-* ### More compact version of ```remember { mutableStateOf(...) }```
+* ### More compact version of `remember { mutableStateOf(...) }`
   
   ```kotlin
   val fieldValue by rememberMutableStateOf(value = 666)
+  ```
+* ### `Lazy*For(...)` and `Lazy*ForIndexed(...)` overloads
+  *Before:*
+  ```kotlin
+  LazyColumn{
+      items(...){
+          ...
+      }
+  }
+  ```
+  *After:*
+  ```kotlin
+    LazyColumnFor(...){
+        ...
+    }
+  ```
+  *Before:*
+  ```kotlin
+  LazyRow{
+      itemsIndexed(...){
+          ...
+      }
+  }
+  ```
+  *After:*
+  ```kotlin
+    LazyRowForIndexed(...){
+        ...
+    }
   ```
