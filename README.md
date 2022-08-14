@@ -22,7 +22,7 @@ In the future, I plan to add documentation here for all functions.
     repository {
     jcenter()
     mavenCentral()
-//    ...
+    ...
     maven { url 'https://jitpack.io' }
   }
      ```
@@ -33,7 +33,7 @@ In the future, I plan to add documentation here for all functions.
    repository {
     jcenter()
     mavenCentral()
-//    ...
+    ...
     maven("https://jitpack.io")
   }
   ```
@@ -77,29 +77,29 @@ In the future, I plan to add documentation here for all functions.
 * ### `Lazy*For(...)` and `Lazy*ForIndexed(...)` overloads
   *Before:*
   ```kotlin
-  LazyColumn{
-      items(...){
+  LazyColumn {
+      items(...) {
           ...
       }
   }
   ```
   *After:*
   ```kotlin
-    LazyColumnFor(...){
+    LazyColumnFor(...) {
         ...
     }
   ```
   *Before:*
   ```kotlin
   LazyRow{
-      itemsIndexed(...){
+      itemsIndexed(...) {
           ...
       }
   }
   ```
   *After:*
   ```kotlin
-    LazyRowForIndexed(...){
+    LazyRowForIndexed(...) {
         ...
     }
   ```
