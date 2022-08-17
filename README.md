@@ -13,32 +13,29 @@ In the future, I plan to add documentation here for all functions.
 
 # Setup
 
-* First, you need to add the JitPack Repository to your project. To do this, add this line of code to your
-  settings.gradle(.kts) file.
+* First, you need to add the JitPack repository to your project.
+  To do this, add this line to your settings.gradle(.kts) file
 
   *Groovy (\*.gradle)*
-
-  ```groovy
+    ```groovy
     repository {
-    jcenter()
-    mavenCentral()
-//    ...
-    maven { url 'https://jitpack.io' }
-  }
-     ```
-
+        jcenter()
+        mavenCentral()
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+   ```
   *Kotlin (\*.gradle.kts)*
 
-  ```kotlin
-   repository {
-    jcenter()
-    mavenCentral()
-//    ...
-    maven("https://jitpack.io")
-  }
-  ```
-
-* Second, add library dependency itself.
+    ```kotlin
+    repository {
+        jcenter()
+        mavenCentral()
+        ...
+        maven { url = URI.create("https://jitpack.io") }
+    }
+    ```
+* Then add the dependency of the library itself
 
   *Groovy (\*.gradle)*
     ```groovy
@@ -56,50 +53,34 @@ In the future, I plan to add documentation here for all functions.
 
 # Documentation
 
-* ### `Text(...)` and `Icon(...)` overloads to avoid writing `stringResource(...)`
-  
+* ### In ```Text(...)``` and ```Icon(...)``` you can now not write ```stringResource(...)```
+
   ```kotlin
-  Text(text = R.string.welcome_text)
+  Text(R.string.welcome_text)
   ```
-  
   ```kotlin
-  Icon(
-      icon = Icons.Default.ExitApp,
-      contentDescription = R.string.exit_app_icon_description
-  )
+  Icon(Icons.Default.ExitApp, R.string.exit_app_icon_description)
   ```
-  
-* ### More compact version of `remember { mutableStateOf(...) }`
-  
+
+* ### More compact version of ```remember { mutableStateOf(...) }```
+
   ```kotlin
-  val fieldValue by rememberMutableStateOf(value = 666)
+  val fieldValue by rememberMutableStateOf(666)
   ```
-* ### `Lazy*For(...)` and `Lazy*ForIndexed(...)` overloads
-  *Before:*
+* ### More compact version of ```remember { derivedStateOf(...) }```
+
   ```kotlin
-  LazyColumn{
-      items(...){
-          ...
-      }
+  val fieldValue by rememberDerivedStateOf(value1, value2) { ... }
+  ```
+
+* ### More compact versions of `Lazy*For(...)` and `Lazy*ForIndexed(...)`
+  ```kotlin
+  LazyColumnFor(personsList) {
+      Text(it.toString())
   }
   ```
-  *After:*
   ```kotlin
-    LazyColumnFor(...){
-        ...
-    }
-  ```
-  *Before:*
-  ```kotlin
-  LazyRow{
-      itemsIndexed(...){
-          ...
-      }
+  LazyRowForIndexed(personsList) { index, person ->
+      SomeComposable(person, index)
   }
-  ```
-  *After:*
-  ```kotlin
-    LazyRowForIndexed(...){
-        ...
-    }
   ```
