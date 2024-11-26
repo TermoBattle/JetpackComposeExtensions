@@ -2,7 +2,9 @@
 
 [![](https://jitpack.io/v/BalbekovAD/JetpackComposeExtensions.svg)](https://jitpack.io/#BalbekovAD/JetpackComposeExtensions)
 
-My handy library that contains some convenient and short overloads for Jetpack Compose
+My handy library that contains some convenient and short overloads for Jetpack Compose.
+
+LIBRARY WAS WRITTEN ON VERY OLD VERSION OF COMPOSE. I AM NOT DEVELOPING IT NOW
 
 [Тот же текст но на русском(Same text but in Russian)](/README(ru).md)
 
